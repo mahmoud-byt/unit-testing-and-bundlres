@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.info-container{
+    border: 2px solid #0075ff;
+    color:gold;}   
+ .stop-clicking{
+ pointer-events:none ;
+ }
+.face-container{
+        width: 150px;
+        height: 150px;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+        margin: 5px 5px;
+       &.is-flipped{
+         transform: rotateY(180deg);
+       }
+       &.matching{
+         transform: rotateY(180deg);
+       }
+        .face{
+        position: absolute; 
+         backface-visibility: hidden; 
+        border: 2px solid #0075ff;
+        cursor: pointer;
+        img{
+            width: 130px;
+            height: 130px;
+        }
+    }
+      .back{
+           transform: rotateY(180deg);
+        }
+    }
+    
